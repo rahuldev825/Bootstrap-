@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+#navbar {
+	background: #ff5e00;
+}
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* position: fixed; */
+	/* top: 0; */
+	padding: 12px 0px;
+}
+.top_icons ul li:first-child {
+    margin-left: 0;
+}
+#navbar.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0px 0px;
+	z-index: 96;
+	background: #fff;
+	box-shadow: 0px 0px 31.04px 0.96px rgba(0, 0, 0, 0.1);
+}
+#navbar.sticky .brand img {
+	max-width: 80%;
+	transition: all 0.5s ease;
+}
+nav .brand {
+  font-weight: bold;
+}
+
+nav div.nav-group {
+	display: flex;
+	/* padding: 50px; */
+	transition: all 0.5s ease;
+/*	padding: 12px 0px;*/
+}
+.menus a{
+	font-family: 'Poppins', sans-serif;
+	font-size: 17px;
+	letter-spacing: 0.50px;
+	font-weight: 400;
+	position: relative;
+}
+.menus a:hover {
+	color: #e6802e;
+}
+.menus a::after {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background: #e6802e;
+	left: 0px;
+	bottom: -5px;
+	transition: all 0.5s ease;
+}
+.menus a:hover::after {
+	width: 100%;
+}
+a.menu-item {
+  text-decoration: none;
+  color: #FFF;
+  transition: all 0.5s ease;
+}
+.nav-group.hamburger {
+  display: none;
+}
+#navbar.sticky a {
+	color: #000;
+}
+.menus .hamburger {
+  display: none;
+}
+
+.menus .hamburger div:first-of-type {
+    transform: rotate(-45deg) translate(-3px, 2px);
+	color: #fff !important;
+  }
+.menus .hamburger div:last-of-type {
+    transform: rotate(45deg) translate(-3px, -2px);
+  }
+
+.hamburger div {
+	display: block;
+	width: 28px;
+	height: 3px;
+	background: #FFF;
+	margin: 5px;
+}
+.nav-group.menus .menu-item:not(:first-child) {
+	margin-left: 65px;
+}
+@media screen and (max-width: 992px) {
+.menus.nav-group {
+	background-color: #000;
+	display: flex;
+	flex-direction: column;
+	padding: 0 !important;
+	margin: 0 !important;
+	position: fixed;
+	top: -100vh;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.7s ease;
+	opacity: 80%;
+	z-index: 2;
+}
+.menus.nav-group.show {
+    top: 0;
+}
+.menus.nav-group a {
+	font-size: 22px;
+	letter-spacing: 0.50px;
+	color: #fff !important;
+}
+.menus.nav-group a.menu-item:not(:first-child) {
+    margin-left: 0;
+    margin-top: 1.7rem;
+}
+.nav-group.hamburger {
+	display: block;
+	cursor: pointer;
+}
+.menus .hamburger {
+	display: block;
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	cursor: pointer;
+}
+    
+}
+
